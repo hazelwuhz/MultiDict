@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Dictionary Website</h1>
+        <form id="add-word-form">
+            <input type="text" id="word" placeholder="Enter Word" required>
+            <textarea id="definition" placeholder="Enter Definition" required></textarea>
+            <input type="url" id="link" placeholder="Enter Link" required>
+            <button type="submit">Add Word</button>
+        </form>
+    </header>
+
+    <main>
+        <h2>Words in Dictionary:</h2>
+        <ul id="word-list"></ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
