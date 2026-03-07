@@ -63,3 +63,8 @@ async function loadWords() {
 
 // Load words on page load
 loadWords();
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log("DOM content loaded, calling loadWords");
+    loadWords();
+});
