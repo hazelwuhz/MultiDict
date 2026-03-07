@@ -2,6 +2,8 @@ const supabaseUrl = 'https://wpyixlovraikzufifjhe.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndweWl4bG92cmFpa3p1ZmlmamhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4NzUzNjUsImV4cCI6MjA4ODQ1MTM2NX0.AnmM-tVpVYGFCe42NozutnjU9rrTb7KMtBMjrESr4_Y';
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
+console.log("Supabase client initialized", supabase);
+
 // DOM elements
 const form = document.getElementById("add-word-form");
 const wordList = document.getElementById("word-list");
@@ -26,6 +28,8 @@ form.addEventListener("submit", async (event) => {
         .insert([
             { word: word, definition: definition, link: link }
         ]);
+
+    console.log("Fetched data:", data);
 
     if (error) {
         console.error('Error inserting data:', error.message);
