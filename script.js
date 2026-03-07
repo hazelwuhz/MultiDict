@@ -38,6 +38,9 @@ form.addEventListener("submit", async (event) => {
 
 // Load all words from the database
 async function loadWords() {
+
+    console.log("Loading words...");
+    
     const { data, error } = await supabase
         .from('dictionary')
         .select('*');
